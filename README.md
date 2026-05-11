@@ -1,27 +1,29 @@
 # Hi, I'm Marcus Howarth
 
-Java developer with a background in finance, healthcare, and integration platforms. I build tools that connect things together — currently focused on MCP servers that give AI assistants useful, real-world capabilities.
+Java developer by trade. In my own time I build personal tools that connect AI to the real world — things I actually use, wired up to my own data.
 
 ---
 
-## MCP Servers
+## What I'm building
 
-Model Context Protocol servers built on [Quarkus](https://quarkus.io) and [Spring Boot](https://spring.io/projects/spring-boot), deployed on AWS EC2 behind Caddy.
+MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapters that give AI assistants genuine capabilities beyond chat.
 
-| Project | Stack | What it does |
-|---------|-------|-------------|
-| [KanbanMCP](https://github.com/marcushowarth/KanbanMCP) | Spring Boot 4, Java 21 | Connects Claude to [Kanboard](https://kanboard.org) — read boards, manage tasks, comments, subtasks, external links |
-| [MediaWikiMCP](https://github.com/marcushowarth/MediaWikiMCP) | Quarkus, Java 21 | Connects Claude to a MediaWiki instance — read, write and search pages, categories, namespaces |
+| Project | What it does |
+|---------|-------------|
+| [KanbanMCP](https://github.com/marcushowarth/KanbanMCP) | Connects Claude to [Kanboard](https://kanboard.org) — my self-hosted [kanban board](https://en.wikipedia.org/wiki/Kanban_board) for tracking tasks and projects |
+| [MediaWikiMCP](https://github.com/marcushowarth/MediaWikiMCP) | Connects Claude to my personal MediaWiki instance — a self-hosted second brain for notes, projects and reference docs |
 
-Both use the [MCP Streamable HTTP transport](https://modelcontextprotocol.io) (protocol 2025-11-25) and deploy via GitHub Actions → ECR → EC2.
+The goal: Claude can read my task board, update my wiki, and work with context about what I'm actually doing — rather than starting from scratch each conversation.
+
+Both use the [MCP Streamable HTTP transport](https://modelcontextprotocol.io) (protocol 2025-11-25) and deploy via GitHub Actions → ECR → EC2. Built on [Quarkus](https://quarkus.io) and [Spring Boot](https://spring.io/projects/spring-boot), Java 21.
 
 ---
 
-## Interests
+## Other interests
 
-- Java, Spring Boot, Apache Camel, messaging and microservices
-- Home automation — MQTT, Zigbee, Home Assistant, solar/battery with [foxess_modbus](https://github.com/nathanmarlor/foxess_modbus)
+- Home automation — Home Assistant, Zigbee, MQTT, solar/battery monitoring with [foxess_modbus](https://github.com/nathanmarlor/foxess_modbus); early days also with [hass-mcp-server](https://github.com/ganhammar/hass-mcp-server) to give Claude direct access to Home Assistant
 - Restoring bikes
+- Java, Apache Camel, messaging and microservices
 
 ---
 
