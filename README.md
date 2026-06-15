@@ -15,7 +15,7 @@ MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapte
 
 The goal: Claude can read my task board, update my wiki, and work with context about what I'm actually doing — rather than starting from scratch each conversation.
 
-Both use the [MCP Streamable HTTP transport](https://modelcontextprotocol.io) (protocol 2025-11-25) and deploy via GitHub Actions → ECR → EC2. Built on [Quarkus](https://quarkus.io) and [Spring Boot](https://spring.io/projects/spring-boot), Java 21.
+Both deploy via GitHub Actions → ECR → EC2, built on [Quarkus](https://quarkus.io). KanbanMCP is compiled to a [GraalVM](https://www.graalvm.org) native image (~30 MB).
 
 ---
 
