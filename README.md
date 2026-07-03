@@ -19,6 +19,20 @@ Both deploy via GitHub Actions → ECR → EC2, built on [Quarkus](https://quark
 
 ---
 
+## FIN OPTICS
+
+A retirement projection app — [try it live](https://optics.howarth.eu). Split across three repos:
+
+| Repo | Role |
+|------|------|
+| [fin-model](https://github.com/marcushowarth/fin-model) | Java modelling engine — the projection maths itself |
+| [fin-optics-api](https://github.com/marcushowarth/fin-optics-api) | Quarkus-native REST API wrapping the engine |
+| [fin-optics-ui](https://github.com/marcushowarth/fin-optics-ui) | Vue 3 front end — interactive ECharts, client-side persistence |
+
+Same deploy shape as the MCP servers: GitHub Actions → ECR → EC2, Quarkus-native on GraalVM.
+
+---
+
 ## Other interests
 
 - Home automation — Home Assistant, Zigbee, MQTT, solar/battery monitoring with [foxess_modbus](https://github.com/nathanmarlor/foxess_modbus); early days also with [hass-mcp-server](https://github.com/ganhammar/hass-mcp-server) to give Claude direct access to Home Assistant
