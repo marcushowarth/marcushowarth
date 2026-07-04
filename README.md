@@ -33,6 +33,19 @@ Same deploy shape as the MCP servers: GitHub Actions → ECR → EC2, Quarkus-na
 
 ---
 
+## REAL RETRO
+
+*Alpha* — a real-terms retrospective visualiser: [try it live](https://real-retro.howarth.eu). "What did X really cost, in today's money?" for any historical price or value series (income, car prices, whatever you enter), rebased against the ONS RPI series.
+
+| Repo | Role |
+|------|------|
+| [real-retro-api](https://github.com/marcushowarth/real-retro-api) | Quarkus-native REST API, consuming the same `fin-model` engine's `rpi` module |
+| [real-retro-ui](https://github.com/marcushowarth/real-retro-ui) | React front end — a deliberate change from FIN OPTICS's Vue, as a stack comparison |
+
+Same deploy shape again: GitHub Actions → ECR → EC2, Quarkus-native on GraalVM.
+
+---
+
 ## Other interests
 
 - Home automation — Home Assistant, Zigbee, MQTT, solar/battery monitoring with [foxess_modbus](https://github.com/nathanmarlor/foxess_modbus); early days also with [hass-mcp-server](https://github.com/ganhammar/hass-mcp-server) to give Claude direct access to Home Assistant
