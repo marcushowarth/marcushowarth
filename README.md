@@ -15,7 +15,7 @@ MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapte
 
 The goal: Claude can read my task board, update my wiki, and work with context about what I'm actually doing — rather than starting from scratch each conversation.
 
-Both deploy via GitHub Actions → ECR → EC2, built on [Quarkus](https://quarkus.io) and compiled to [GraalVM](https://www.graalvm.org) native images (~10–20 MB resident).
+Both deploy via GitHub Actions → GHCR → Hetzner, built on [Quarkus](https://quarkus.io) and compiled to [GraalVM](https://www.graalvm.org) native images (~10–20 MB resident). Was AWS (ECR → EC2) until a 2026-07-24 migration — prototype on managed cloud to learn the ecosystem, port to cheap dedicated hosting once a service is proven and doesn't need the extra machinery anymore.
 
 ---
 
@@ -29,7 +29,7 @@ A retirement projection app — [try it live](https://optics.howarth.eu). Split 
 | [fin-optics-api](https://github.com/marcushowarth/fin-optics-api) | Quarkus-native REST API wrapping the engine |
 | [fin-optics-ui](https://github.com/marcushowarth/fin-optics-ui) | Vue 3 front end — interactive ECharts, client-side persistence |
 
-Same deploy shape as the MCP servers: GitHub Actions → ECR → EC2, Quarkus-native on GraalVM.
+Same deploy shape as the MCP servers: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM — also migrated off AWS the same day.
 
 ---
 
@@ -42,7 +42,7 @@ Same deploy shape as the MCP servers: GitHub Actions → ECR → EC2, Quarkus-na
 | [real-retro-api](https://github.com/marcushowarth/real-retro-api) | Quarkus-native REST API, consuming the same `fin-model` engine's `rpi` module |
 | [real-retro-ui](https://github.com/marcushowarth/real-retro-ui) | React front end — a deliberate change from FIN OPTICS's Vue, as a stack comparison |
 
-Same deploy shape again: GitHub Actions → ECR → EC2, Quarkus-native on GraalVM.
+Same deploy shape again: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM.
 
 ---
 
