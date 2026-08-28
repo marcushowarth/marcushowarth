@@ -1,6 +1,6 @@
 # Hi, I'm Marcus Howarth
 
-Java developer by trade. In my own time I build personal tools that connect AI to the real world — things I actually use, wired up to my own data.
+Java developer by trade. In my own time building personal tools and connectting AI to things I actually use, wired up to my own data.
 
 ---
 
@@ -36,9 +36,9 @@ Both: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM.
 
 ---
 
-## What I'm building
+## MCP servers 
 
-MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapters that give AI assistants genuine capabilities beyond chat.
+[Model Context Protocol](https://modelcontextprotocol.io) adapters that give AI assistants genuine capabilities beyond chat with self hosted tools.
 
 | Project | What it does |
 |---------|-------------|
