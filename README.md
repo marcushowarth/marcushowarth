@@ -1,6 +1,6 @@
 # Hi, I'm Marcus Howarth
 
-Java developer by trade. In my own time building personal tools and connectting AI to things I actually use, wired up to my own data.
+Java developer by trade. In my own time building personal tools and connecting AI to things I actually use, wired up to my own data.
 
 ---
 
