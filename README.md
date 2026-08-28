@@ -4,6 +4,38 @@ Java developer by trade. In my own time I build personal tools that connect AI t
 
 ---
 
+## FIN OPTICS
+
+**[Try it live →](https://optics.howarth.eu)**
+
+A retirement projection app — model income, expenditure, assets, investments and liabilities month-by-month, in nominal and real terms.
+
+![FIN OPTICS — plan timeline](img/fin-optics-timeline.png)
+![FIN OPTICS — net worth projection](img/fin-optics-networth.png)
+
+| Repo | Role |
+|------|------|
+| [fin-model](https://github.com/marcushowarth/fin-model) | Java modelling engine — the projection maths itself |
+| [fin-optics-api](https://github.com/marcushowarth/fin-optics-api) | Quarkus-native REST API wrapping the engine |
+| [fin-optics-ui](https://github.com/marcushowarth/fin-optics-ui) | Vue 3 front end — interactive ECharts, client-side persistence |
+
+## REAL RETRO
+
+**[Try it live →](https://real-retro.howarth.eu)** · *Alpha*
+
+"What did X really cost, in today's money?" — a real-terms retrospective visualiser for any historical price or value series, rebased against the ONS RPI series.
+
+![REAL RETRO screenshot](img/real-retro-screenshot.png)
+
+| Repo | Role |
+|------|------|
+| [real-retro-api](https://github.com/marcushowarth/real-retro-api) | Quarkus-native REST API, consuming the same `fin-model` engine's `rpi` module |
+| [real-retro-ui](https://github.com/marcushowarth/real-retro-ui) | React front end — a deliberate change from FIN OPTICS's Vue, as a stack comparison |
+
+Both: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM.
+
+---
+
 ## What I'm building
 
 MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapters that give AI assistants genuine capabilities beyond chat.
@@ -16,33 +48,6 @@ MCP servers — [Model Context Protocol](https://modelcontextprotocol.io) adapte
 The goal: Claude can read my task board, update my wiki, and work with context about what I'm actually doing — rather than starting from scratch each conversation.
 
 Both deploy via GitHub Actions → GHCR → Hetzner, built on [Quarkus](https://quarkus.io) and compiled to [GraalVM](https://www.graalvm.org) native images (~10–20 MB resident). Was AWS (ECR → EC2) until a 2026-07-24 migration — prototype on managed cloud to learn the ecosystem, port to cheap dedicated hosting once a service is proven and doesn't need the extra machinery anymore.
-
----
-
-## FIN OPTICS
-
-A retirement projection app — [try it live](https://optics.howarth.eu). Split across three repos:
-
-| Repo | Role |
-|------|------|
-| [fin-model](https://github.com/marcushowarth/fin-model) | Java modelling engine — the projection maths itself |
-| [fin-optics-api](https://github.com/marcushowarth/fin-optics-api) | Quarkus-native REST API wrapping the engine |
-| [fin-optics-ui](https://github.com/marcushowarth/fin-optics-ui) | Vue 3 front end — interactive ECharts, client-side persistence |
-
-Same deploy shape as the MCP servers: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM — also migrated off AWS the same day.
-
----
-
-## REAL RETRO
-
-*Alpha* — a real-terms retrospective visualiser: [try it live](https://real-retro.howarth.eu). "What did X really cost, in today's money?" for any historical price or value series (income, car prices, whatever you enter), rebased against the ONS RPI series.
-
-| Repo | Role |
-|------|------|
-| [real-retro-api](https://github.com/marcushowarth/real-retro-api) | Quarkus-native REST API, consuming the same `fin-model` engine's `rpi` module |
-| [real-retro-ui](https://github.com/marcushowarth/real-retro-ui) | React front end — a deliberate change from FIN OPTICS's Vue, as a stack comparison |
-
-Same deploy shape again: GitHub Actions → GHCR → Hetzner, Quarkus-native on GraalVM.
 
 ---
 
